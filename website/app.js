@@ -4,8 +4,8 @@
 let d = new Date();
 let newDate = d.getMonth()+'/'+ d.getDate()+'/'+ d.getFullYear();
 
-const url ="https://api.openweathermap.org/data/2.5/weather?zip='";
-const apikey ="39bd8266c4704967799498f3a494f673&units=imperial";
+const url ="https://api.openweathermap.org/data/2.5/weather?zip=";
+const apikey ="&appid=39bd8266c4704967799498f3a494f673&units=imperial";
 
 const server ="http://localhost:5000";
 
@@ -21,6 +21,7 @@ function DataGenerate(){
     // using Promise  Geting data from api 
     weatherDataReterve(zip)
     .then((data)=>{
+        if(data && data.main){
     const {
         main:{temp},
         weather:[{description}]
@@ -28,20 +29,24 @@ function DataGenerate(){
 
     const infor = {
         newDate,
-        temp:Math.round(temp),
-        description,
+        temp:Math.round(temp),   
         feeling
     }
 
-    (server+'/Dpost',infor);
+    dataPost(server +'/Dpost',infor);
     getData();
+
+  }
+  else{
+    console.error("Invalid data received from API: ",data);
+  }
 
     });
 }
 
 async function getData() {
 
-    const result = fetch(server,"/getALL");
+    const result = await fetch(server +"/getALL");
 
     try{
         const dataa = await result.json();
@@ -49,7 +54,6 @@ async function getData() {
         document.getElementById("date").innerHTML = "current Date: "+dataa.newDate;
         document.getElementById("temp").innerHTML = "Temperature Wether: "+dataa.temp;
         document.getElementById("content").innerHTML = "content : "+dataa.feeling;
-        // document.getElementById("date").innerHTML = "current Date: "+dataa.newDate;
 
     }
     catch(error){

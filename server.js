@@ -22,13 +22,13 @@ app.use(press.static('website'));
 
 // Setup Server
 
-app.get("/DataALl",(req,res)=>{
+app.get("/getALL",(req,res)=>{
     res.send(projectData).status(200);
 });
 
-app.post("/addData",(req,res)=>{
+app.post("/Dpost",(req,res)=>{
     projectData =req.body;
-    console.log(projectData);
+    console.log("req.body ",projectData);
 
     res.send(projectData).status(200);
 });
