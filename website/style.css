@@ -1,0 +1,157 @@
+/* general styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+    background: #96c7f8;
+    color: #0073e6;
+    /* background: url(images/sky.jpg); */
+    
+  }
+  
+  #app {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 8px;
+  }
+  
+  .holder {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    background: #f9f9f9;
+  }
+  
+  .headline {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    background: #0073e6;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'Ranga', cursive;
+  }
+  
+  button {
+    background: #0073e6;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  button:hover {
+    background: #005bb5;
+  }
+  
+  .entry {
+    background: #e6f7ff;
+    border: 1px solid #b3e0ff;
+    border-radius: 5px;
+  }
+  
+  .title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0073e6;
+    margin-bottom: 10px;
+  }
+  
+  #entryHolder {
+    padding: 10px;
+  }
+  
+  #date, #temp, #content {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* media mueries */
+@media (max-width: 768px) {
+    #app {
+      padding: 15px;
+    }
+  
+    .headline {
+      font-size: 20px;
+      padding: 10px;
+    }
+  
+    input[type="text"], textarea {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  
+    .title {
+      font-size: 18px;
+    }
+  
+    #date, #temp, #content {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .headline {
+      font-size: 18px;
+      padding: 8px;
+    }
+  
+    input[type="text"], textarea {
+      font-size: 12px;
+      padding: 6px;
+    }
+  
+    button {
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+  
+    .title {
+      font-size: 16px;
+    }
+  
+    #date, #temp, #content {
+      font-size: 14px;
+    }
+  }
+  
