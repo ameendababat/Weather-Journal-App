@@ -60,6 +60,10 @@ The **Weather-Journal App** gives you hands-on experience with:
    
 - **CSS**:
    - Modern styling for a polished and user-friendly look.
+📸 Screenshots
+Here’s a sneak peek of the app interface:
+
+![Weather-Journal App Interface](homepage.jpg)
 
 
 
